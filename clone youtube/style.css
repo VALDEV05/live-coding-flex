@@ -24,6 +24,7 @@ i{
 **************/
 .site_header{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid #2a2a2a;
@@ -50,7 +51,7 @@ i{
     flex-grow: 2;
 }
 .site_header .menu{
-    text-align: right;
+    justify-content: end;
 }
 /* immagine */
 .site_header .logo img{
@@ -92,6 +93,80 @@ input[type="search"]{
 /************* 
 *    main    *
 **************/
+.content_main{
+    padding: 0 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.site_main .song{
+    width: max-content;
+    margin: 1rem 2rem;
+}
+.site_main .song .image{
+    position: relative;
+    height:242px;
+}
+.image .play{
+    display: flex;
+    background-color: rgba(0, 0, 0, 25%);
+    height: 15%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+.image .cover{
+    visibility: hidden;
+    display: flex;
+    background-color: rgba(0, 0, 0, 75%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+.cover i{
+    transform: scale(2);
+}
+.cover p{
+    color: white;
+    font-size: 20px;
+    padding-left: 15px;
+}
+.image .play i{
+    transform: scale(1.5);
+}
+.site_main .song .description{
+    color: white;
+    height: 20%;
+}
+.description h1{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding-top: .5rem;
+}
+.description h1 i{
+    display: none;
+}
+.description p{
+    font-size: 15px;
+}
+/* effetti main hover */
+.song:hover .song:hover .description h1 i{
+    display: block;
+}
+.song:hover .description h1 i{
+    display: block;
+}
+.song:hover .image .cover{
+    visibility: visible;
+}
 /************* 
 *   /main    *
 **************/
